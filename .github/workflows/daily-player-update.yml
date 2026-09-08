@@ -1,0 +1,49 @@
+name: Daily player data update
+
+on:
+  schedule:
+    # 21:20 UTC = 06:20 JST
+    - cron: "20 21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-player-update
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Update NPB roster, positions and career totals
+        run: python automation/update_daily.py
+      - name: Update MLB career totals
+        run: python automation/update_mlb.py
+      - name: Validate generated database
+        run: python automation/validate_database.py
+      - name: Keep an auditable data history
+        run: |
+          if git diff --quiet -- dist/npb_players_full.json; then
+            echo "No player data changes"
+          else
+            git config user.name "npb-data-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add dist/npb_players_full.json
+            git commit -m "data: daily player update $(TZ=Asia/Tokyo date +%F)"
+            git push
+          fi
+      - name: Deploy the verified site to Netlify
+        run: npx --yes netlify-cli@23 deploy --prod --dir=dist --site="$NETLIFY_SITE_ID" --auth="$NETLIFY_AUTH_TOKEN"
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
