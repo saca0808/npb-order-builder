@@ -1,0 +1,598 @@
+{
+  "schema_version": 2,
+  "canonical_teams": [
+    {
+      "id": "F",
+      "name": "北海道日本ハムファイターズ",
+      "aliases": [
+        "東京セネタース",
+        "セネタース",
+        "東急フライヤーズ",
+        "急映フライヤーズ",
+        "東映フライヤーズ",
+        "日拓ホームフライヤーズ",
+        "日本ハムファイターズ",
+        "北海道日本ハムファイターズ"
+      ]
+    },
+    {
+      "id": "E",
+      "name": "東北楽天ゴールデンイーグルス",
+      "aliases": [
+        "東北楽天ゴールデンイーグルス"
+      ]
+    },
+    {
+      "id": "L",
+      "name": "埼玉西武ライオンズ",
+      "aliases": [
+        "クラウンライターライオンズ",
+        "西鉄ライオンズ",
+        "太平洋クラブライオンズ",
+        "西武ライオンズ",
+        "埼玉西武ライオンズ"
+      ]
+    },
+    {
+      "id": "M",
+      "name": "千葉ロッテマリーンズ",
+      "aliases": [
+        "毎日オリオンズ",
+        "毎日大映オリオンズ",
+        "東京オリオンズ",
+        "ロッテオリオンズ",
+        "ロッテ・オリオンズ",
+        "千葉ロッテマリーンズ"
+      ]
+    },
+    {
+      "id": "B",
+      "name": "オリックス・バファローズ",
+      "aliases": [
+        "阪急ブレーブス",
+        "オリックス・ブレーブス",
+        "オリックス・ブルーウェーブ",
+        "大阪近鉄バファローズ",
+        "オリックス・バファローズ"
+      ]
+    },
+    {
+      "id": "H",
+      "name": "福岡ソフトバンクホークス",
+      "aliases": [
+        "南海ホークス",
+        "福岡ダイエーホークス",
+        "福岡ソフトバンクホークス"
+      ]
+    },
+    {
+      "id": "G",
+      "name": "読売ジャイアンツ",
+      "aliases": [
+        "東京巨人",
+        "読売ジャイアンツ"
+      ]
+    },
+    {
+      "id": "T",
+      "name": "阪神タイガース",
+      "aliases": [
+        "大阪タイガース",
+        "阪神タイガース"
+      ]
+    },
+    {
+      "id": "D",
+      "name": "中日ドラゴンズ",
+      "aliases": [
+        "名古屋軍",
+        "産業軍",
+        "中部日本",
+        "中日ドラゴンズ",
+        "名古屋ドラゴンズ"
+      ]
+    },
+    {
+      "id": "DB",
+      "name": "横浜DeNAベイスターズ",
+      "aliases": [
+        "大洋ホエールズ",
+        "洋松ロビンス",
+        "大洋松竹ロビンス",
+        "横浜大洋ホエールズ",
+        "横浜ベイスターズ",
+        "横浜DeNAベイスターズ"
+      ]
+    },
+    {
+      "id": "C",
+      "name": "広島東洋カープ",
+      "aliases": [
+        "広島カープ",
+        "広島東洋カープ"
+      ]
+    },
+    {
+      "id": "S",
+      "name": "東京ヤクルトスワローズ",
+      "aliases": [
+        "国鉄スワローズ",
+        "サンケイスワローズ",
+        "サンケイアトムズ",
+        "アトムズ",
+        "ヤクルトアトムズ",
+        "ヤクルトスワローズ",
+        "東京ヤクルトスワローズ"
+      ]
+    }
+  ],
+  "players": [
+    {
+      "id": "ohtani_shohei",
+      "name": "大谷 翔平",
+      "kana": "おおたに しょうへい",
+      "birth": "1994-07-05",
+      "active": true,
+      "positions": [
+        "投手",
+        "外野手",
+        "指名打者"
+      ],
+      "throws": "右",
+      "bats": "左",
+      "clubs": [
+        "F"
+      ],
+      "club_history": [
+        "F"
+      ],
+      "npb_batting": "打率 .274 / 48本塁打 / 166打点 / 296安打",
+      "npb_pitching": "42勝 / 防御率 2.52 / 624奪三振",
+      "mlb_batting": "MLB成績は公式データ取込フィールド",
+      "mlb_pitching": "MLB成績は公式データ取込フィールド"
+    },
+    {
+      "id": "ichiro",
+      "name": "イチロー",
+      "kana": "いちろー",
+      "birth": "1973-10-22",
+      "active": false,
+      "positions": [
+        "外野手"
+      ],
+      "throws": "右",
+      "bats": "左",
+      "clubs": [
+        "B"
+      ],
+      "club_history": [
+        "B"
+      ],
+      "npb_batting": "打率 .353 / 1,278安打 / 118本塁打 / 529打点",
+      "npb_pitching": "",
+      "mlb_batting": "打率 .311 / 3,089安打 / 117本塁打 / 780打点",
+      "mlb_pitching": ""
+    },
+    {
+      "id": "sadaharu_oh",
+      "name": "王 貞治",
+      "kana": "おう さだはる",
+      "birth": "1940-05-20",
+      "active": false,
+      "positions": [
+        "一塁手"
+      ],
+      "throws": "左",
+      "bats": "左",
+      "clubs": [
+        "G"
+      ],
+      "club_history": [
+        "G"
+      ],
+      "npb_batting": "打率 .301 / 868本塁打 / 2,170安打 / 2,170打点",
+      "npb_pitching": "",
+      "mlb_batting": "",
+      "mlb_pitching": ""
+    },
+    {
+      "id": "hiromitsu_ochiai",
+      "name": "落合 博満",
+      "kana": "おちあい ひろみつ",
+      "birth": "1953-12-09",
+      "active": false,
+      "positions": [
+        "一塁手",
+        "二塁手",
+        "三塁手"
+      ],
+      "throws": "右",
+      "bats": "右",
+      "clubs": [
+        "M",
+        "D",
+        "G",
+        "F"
+      ],
+      "club_history": [
+        "M",
+        "D",
+        "G",
+        "F"
+      ],
+      "npb_batting": "打率 .311 / 510本塁打 / 1,564打点 / 2,371安打",
+      "npb_pitching": "",
+      "mlb_batting": "",
+      "mlb_pitching": ""
+    },
+    {
+      "id": "hideki_matsui",
+      "name": "松井 秀喜",
+      "kana": "まつい ひでき",
+      "birth": "1974-06-12",
+      "active": false,
+      "positions": [
+        "外野手",
+        "指名打者"
+      ],
+      "throws": "右",
+      "bats": "左",
+      "clubs": [
+        "G"
+      ],
+      "club_history": [
+        "G"
+      ],
+      "npb_batting": "打率 .304 / 332本塁打 / 889打点",
+      "npb_pitching": "",
+      "mlb_batting": "打率 .282 / 175本塁打 / 760打点",
+      "mlb_pitching": ""
+    },
+    {
+      "id": "atsuya_furuta",
+      "name": "古田 敦也",
+      "kana": "ふるた あつや",
+      "birth": "1965-08-06",
+      "active": false,
+      "positions": [
+        "捕手"
+      ],
+      "throws": "右",
+      "bats": "右",
+      "clubs": [
+        "S"
+      ],
+      "club_history": [
+        "S"
+      ],
+      "npb_batting": "打率 .294 / 217本塁打 / 1,009打点 / 2,097安打",
+      "npb_pitching": "",
+      "mlb_batting": "",
+      "mlb_pitching": ""
+    },
+    {
+      "id": "katsuya_nomura",
+      "name": "野村 克也",
+      "kana": "のむら かつや",
+      "birth": "1935-06-29",
+      "active": false,
+      "positions": [
+        "捕手"
+      ],
+      "throws": "右",
+      "bats": "右",
+      "clubs": [
+        "H",
+        "M",
+        "L"
+      ],
+      "club_history": [
+        "H",
+        "M",
+        "L"
+      ],
+      "npb_batting": "打率 .277 / 657本塁打 / 1,988打点 / 2,901安打",
+      "npb_pitching": "",
+      "mlb_batting": "",
+      "mlb_pitching": ""
+    },
+    {
+      "id": "shinya_miyamoto",
+      "name": "宮本 慎也",
+      "kana": "みやもと しんや",
+      "birth": "1970-11-05",
+      "active": false,
+      "positions": [
+        "遊撃手",
+        "三塁手"
+      ],
+      "throws": "右",
+      "bats": "右",
+      "clubs": [
+        "S"
+      ],
+      "club_history": [
+        "S"
+      ],
+      "npb_batting": "打率 .282 / 2,133安打 / 111本塁打 / 578打点",
+      "npb_pitching": "",
+      "mlb_batting": "",
+      "mlb_pitching": ""
+    },
+    {
+      "id": "tetsuto_yamada",
+      "name": "山田 哲人",
+      "kana": "やまだ てつと",
+      "birth": "1992-07-16",
+      "active": true,
+      "positions": [
+        "二塁手"
+      ],
+      "throws": "右",
+      "bats": "右",
+      "clubs": [
+        "S"
+      ],
+      "club_history": [
+        "S"
+      ],
+      "npb_batting": "NPB通算成績：公式データ取込フィールド",
+      "npb_pitching": "",
+      "mlb_batting": "",
+      "mlb_pitching": ""
+    },
+    {
+      "id": "norichika_aoki",
+      "name": "青木 宣親",
+      "kana": "あおき のりちか",
+      "birth": "1982-01-05",
+      "active": false,
+      "positions": [
+        "外野手"
+      ],
+      "throws": "右",
+      "bats": "左",
+      "clubs": [
+        "S"
+      ],
+      "club_history": [
+        "S"
+      ],
+      "npb_batting": "NPB通算成績：公式データ取込フィールド",
+      "npb_pitching": "",
+      "mlb_batting": "MLB通算成績：公式データ取込フィールド",
+      "mlb_pitching": ""
+    },
+    {
+      "id": "masahiro_tanaka",
+      "name": "田中 将大",
+      "kana": "たなか まさひろ",
+      "birth": "1988-11-01",
+      "active": true,
+      "positions": [
+        "投手"
+      ],
+      "throws": "右",
+      "bats": "右",
+      "clubs": [
+        "E"
+      ],
+      "club_history": [
+        "E"
+      ],
+      "npb_batting": "",
+      "npb_pitching": "NPB通算成績：公式データ取込フィールド",
+      "mlb_batting": "",
+      "mlb_pitching": "MLB通算成績：公式データ取込フィールド"
+    },
+    {
+      "id": "daisuke_matsuzaka",
+      "name": "松坂 大輔",
+      "kana": "まつざか だいすけ",
+      "birth": "1980-09-13",
+      "active": false,
+      "positions": [
+        "投手"
+      ],
+      "throws": "右",
+      "bats": "右",
+      "clubs": [
+        "L",
+        "D"
+      ],
+      "club_history": [
+        "L",
+        "D"
+      ],
+      "npb_batting": "",
+      "npb_pitching": "NPB通算成績：公式データ取込フィールド",
+      "mlb_batting": "",
+      "mlb_pitching": "MLB通算成績：公式データ取込フィールド"
+    },
+    {
+      "id": "yusei_kikuchi",
+      "name": "菊池 雄星",
+      "kana": "きくち ゆうせい",
+      "birth": "1991-06-17",
+      "active": true,
+      "positions": [
+        "投手"
+      ],
+      "throws": "左",
+      "bats": "左",
+      "clubs": [
+        "L"
+      ],
+      "club_history": [
+        "L"
+      ],
+      "npb_batting": "",
+      "npb_pitching": "NPB通算成績：公式データ取込フィールド",
+      "mlb_batting": "",
+      "mlb_pitching": "MLB通算成績：公式データ取込フィールド"
+    },
+    {
+      "id": "koji_uehara",
+      "name": "上原 浩治",
+      "kana": "うえはら こうじ",
+      "birth": "1975-04-03",
+      "active": false,
+      "positions": [
+        "投手"
+      ],
+      "throws": "右",
+      "bats": "右",
+      "clubs": [
+        "G"
+      ],
+      "club_history": [
+        "G"
+      ],
+      "npb_batting": "",
+      "npb_pitching": "NPB通算成績：公式データ取込フィールド",
+      "mlb_batting": "",
+      "mlb_pitching": "MLB通算成績：公式データ取込フィールド"
+    },
+    {
+      "id": "tomonori_kanemoto",
+      "name": "金本 知憲",
+      "kana": "かねもと ともあき",
+      "birth": "1968-04-03",
+      "active": false,
+      "positions": [
+        "外野手"
+      ],
+      "throws": "右",
+      "bats": "左",
+      "clubs": [
+        "C",
+        "T"
+      ],
+      "club_history": [
+        "C",
+        "T"
+      ],
+      "npb_batting": "打率 .285 / 476本塁打 / 1,521打点 / 2,539安打",
+      "npb_pitching": "",
+      "mlb_batting": "",
+      "mlb_pitching": ""
+    },
+    {
+      "id": "kazuhiro_kiyohara",
+      "name": "清原 和博",
+      "kana": "きよはら かずひろ",
+      "birth": "1967-08-18",
+      "active": false,
+      "positions": [
+        "一塁手"
+      ],
+      "throws": "右",
+      "bats": "右",
+      "clubs": [
+        "L",
+        "G",
+        "B"
+      ],
+      "club_history": [
+        "L",
+        "G",
+        "B"
+      ],
+      "npb_batting": "打率 .272 / 525本塁打 / 1,530打点",
+      "npb_pitching": "",
+      "mlb_batting": "",
+      "mlb_pitching": ""
+    },
+    {
+      "id": "masahiro_yoshida",
+      "name": "吉田 正尚",
+      "kana": "よしだ まさたか",
+      "birth": "1993-07-15",
+      "active": true,
+      "positions": [
+        "外野手",
+        "指名打者"
+      ],
+      "throws": "右",
+      "bats": "左",
+      "clubs": [
+        "B"
+      ],
+      "club_history": [
+        "B"
+      ],
+      "npb_batting": "NPB通算成績：公式データ取込フィールド",
+      "npb_pitching": "",
+      "mlb_batting": "MLB通算成績：公式データ取込フィールド",
+      "mlb_pitching": ""
+    },
+    {
+      "id": "yuki_yanagita",
+      "name": "柳田 悠岐",
+      "kana": "やなぎた ゆうき",
+      "birth": "1988-10-09",
+      "active": true,
+      "positions": [
+        "外野手"
+      ],
+      "throws": "右",
+      "bats": "左",
+      "clubs": [
+        "H"
+      ],
+      "club_history": [
+        "H"
+      ],
+      "npb_batting": "NPB通算成績：公式データ取込フィールド",
+      "npb_pitching": "",
+      "mlb_batting": "",
+      "mlb_pitching": ""
+    },
+    {
+      "id": "iwa_se",
+      "name": "岩瀬 仁紀",
+      "kana": "いわせ ひとき",
+      "birth": "1974-11-10",
+      "active": false,
+      "positions": [
+        "投手"
+      ],
+      "throws": "左",
+      "bats": "左",
+      "clubs": [
+        "D"
+      ],
+      "club_history": [
+        "D"
+      ],
+      "npb_batting": "",
+      "npb_pitching": "NPB通算成績：公式データ取込フィールド",
+      "mlb_batting": "",
+      "mlb_pitching": ""
+    },
+    {
+      "id": "tatsunami_kazuyoshi",
+      "name": "立浪 和義",
+      "kana": "たつなみ かずよし",
+      "birth": "1969-08-19",
+      "active": false,
+      "positions": [
+        "二塁手",
+        "遊撃手",
+        "三塁手"
+      ],
+      "throws": "右",
+      "bats": "左",
+      "clubs": [
+        "D"
+      ],
+      "club_history": [
+        "D"
+      ],
+      "npb_batting": "打率 .285 / 2,480安打 / 171本塁打",
+      "npb_pitching": "",
+      "mlb_batting": "",
+      "mlb_pitching": ""
+    }
+  ]
+}
