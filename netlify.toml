@@ -1,0 +1,11 @@
+[build]
+  publish = "dist"
+
+[build.environment]
+  PYTHON_VERSION = "3.12"
+
+[[headers]]
+  for = "/npb_players_full.json"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
+
