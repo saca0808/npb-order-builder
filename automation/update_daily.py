@@ -228,6 +228,7 @@ def main():
 
     players.sort(key=lambda player: (not player.get("active"), player.get("name", "")))
     database["roster_as_of"] = TODAY
+    database["stats_updated_through"] = TODAY
     database["updated_at"] = TODAY
     database["update_status"] = {"npb_roster": len(roster), "profile_failures": len(failures), "season": YEAR}
     with open(DB_PATH, "w", encoding="utf-8") as output:
