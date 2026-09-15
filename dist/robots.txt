@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://npb-order-builder.netlify.app/sitemap.xml
+Sitemap: https://saca0808.github.io/npb-order-builder/sitemap.xml
