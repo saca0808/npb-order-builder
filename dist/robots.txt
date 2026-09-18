@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://saca0808.github.io/npb-order-builder/sitemap.xml
+Sitemap: https://saca0808.github.io/npb-order-builder/sitemap.txt
