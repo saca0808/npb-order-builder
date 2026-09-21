@@ -83,7 +83,7 @@ function visualTeam(p){return p.active&&p.current_team&&teamMap[p.current_team]?
 function visualColor(p){return visualTeam(p)?teamColors[visualTeam(p)]:(p.active?'#526477':'#8b949e')}
 function teamLabel(p){const id=visualTeam(p);return id?teamMap[id].name:(p.current_team_name|| (p.active?'海外リーグ現役':'OB'))}
 function rosterBadge(p){if(!p.active)return '<span class=badge>OB</span>';if(p.roster_kind==='育成')return '<span class="badge development">育成</span>';if(p.roster_kind==='支配下')return '<span class=badge>支配下</span>';return '<span class=badge>現役</span>'}
-function positionMeta(p){if(!p.official_position){const pending=p.unverified_positions?.length?'（ほかの守備位置は確認中）':'';return `出場ポジション：${p.positions.join('・')}${pending}`}const note=p.position_note?`（${p.position_note}）`:'';return `登録ポジション：${p.official_position} ／ 出場ポジション：${p.positions.join('・')}${note}`}
+function positionMeta(p){return p.official_position?`登録ポジション：${p.official_position} ／ 出場ポジション：${p.positions.join('・')}`:`出場ポジション：${p.positions.join('・')}`}
 function profileMeta(p){return p.birth?`生年月日 ${p.birth}`:'生年月日 未登録'}
 function clearBirth(){$('birthFrom').value='';$('birthTo').value='';render()}
 function searchKey(value){return String(value||'').normalize('NFKC').toLowerCase().replace(/[\s・．.･ー―‐-]/g,'').replace(/[髙﨑神邉邊]/g,c=>({'髙':'高','﨑':'崎','神':'神','邉':'辺','邊':'辺'}[c]))}
