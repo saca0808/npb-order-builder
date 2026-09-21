@@ -35,6 +35,10 @@ jobs:
       - name: Update NPB roster, positions and career totals
         run: python automation/update_daily.py
 
+      - name: Review historical pitcher positions
+        run: python automation/review_ob_pitcher_positions.py
+      - name: Restore documented defensive positions
+        run: python automation/merge_fielding_evidence.py data/player_fielding.zip
       - name: Update MLB career totals
         run: python automation/update_mlb.py
 
