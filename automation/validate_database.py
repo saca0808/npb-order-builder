@@ -26,7 +26,10 @@ allowed_positions = {"投手", "捕手", "一塁手", "二塁手", "三塁手", 
 for player in players:
     if not player.get("name"):
         raise SystemExit(f"missing name: {player.get('id')}")
-    if any(position not in allowed_positions for position in player.get("positions", [])):
+    positions = player.get("positions", [])
+    if len(positions) != len(set(positions)):
+        raise SystemExit(f"duplicate position: {player.get('id')} {positions}")
+    if any(position not in allowed_positions for position in positions):
         raise SystemExit(f"invalid position: {player.get('id')}")
     birth = player.get("birth")
     if birth and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", birth):

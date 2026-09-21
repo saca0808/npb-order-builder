@@ -204,10 +204,9 @@ def main():
             player["club_history"].append(record["team"])
         actual = [position for position in POSITIONS if position in fielding.get((record["team"], norm(record["name"])), set())]
         old_dh = "指名打者" in player.get("positions", [])
-        fallback = {"投手": ["投手"], "捕手": ["捕手"], "内野手": INFIELD, "外野手": ["外野手"]}[record["position"]]
-        player["positions"] = actual or fallback
-        if old_dh:
-            player["positions"].append("指名打者")
+        fallback_map = {"投手": ["投手"], "捕手": ["捕手"], "内野手": INFIELD, "外野手": ["外野手"]}
+        base_positions = list(actual) if actual else list(fallback_map[record["position"]])
+        player["positions"] = list(dict.fromkeys(base_positions + (["指名打者"] if old_dh else [])))
         player["position_note"] = f"{YEAR}年一・二軍守備記録に基づく出場ポジション"
 
     failures = []
