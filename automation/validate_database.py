@@ -31,6 +31,11 @@ for player in players:
         raise SystemExit(f"duplicate position: {player.get('id')} {positions}")
     if any(position not in allowed_positions for position in positions):
         raise SystemExit(f"invalid position: {player.get('id')}")
+    hidden = set(player.get('unverified_positions', []))
+    if hidden.intersection(player.get('positions', [])):
+        raise SystemExit(f"unverified position shown as confirmed: {player.get('id')}")
+    if any(position not in allowed_positions for position in hidden):
+        raise SystemExit(f"invalid unverified position: {player.get('id')}")
     birth = player.get("birth")
     if birth and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", birth):
         raise SystemExit(f"invalid birth date: {player.get('id')} {birth}")
