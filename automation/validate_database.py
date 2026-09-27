@@ -36,6 +36,10 @@ for player in players:
         raise SystemExit(f"unverified position shown as confirmed: {player.get('id')}")
     if any(position not in allowed_positions for position in hidden):
         raise SystemExit(f"invalid unverified position: {player.get('id')}")
+    career_years = [int(year) for year in re.findall(r"\d{4}", str(player.get("years", "")))]
+    if (not player.get("active") and career_years and max(career_years) < 1975
+            and "指名打者" in positions):
+        raise SystemExit(f"DH before its 1975 NPB introduction: {player.get('id')}")
     birth = player.get("birth")
     if birth and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", birth):
         raise SystemExit(f"invalid birth date: {player.get('id')} {birth}")

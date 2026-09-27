@@ -13,6 +13,7 @@ defended any particular position.
 """
 
 import json
+import re
 from pathlib import Path
 
 DB_PATH = Path('dist/npb_players_full.json')
@@ -31,6 +32,31 @@ SCOUTING_STARTS = {
     ],
 }
 NOTE = '投手以外の登録は守備出場の確認が必要なため非表示'
+NPB_DH_FIRST_YEAR = 1975
+
+
+def remove_impossible_dh(database):
+    """Remove DH from players whose NPB career ended before its 1975 debut."""
+    corrected = 0
+    for player in database['players']:
+        if player.get('active') or '指名打者' not in player.get('positions', []):
+            continue
+        years = [int(year) for year in re.findall(r'\d{4}', str(player.get('years', '')))]
+        if not years or max(years) >= NPB_DH_FIRST_YEAR:
+            continue
+        player['positions'] = [position for position in player['positions'] if position != '指名打者']
+        if 'career_positions' in player:
+            player['career_positions'] = [position for position in player['career_positions']
+                                          if position != '指名打者']
+        if 'unverified_positions' in player:
+            player['unverified_positions'] = [position for position in player['unverified_positions']
+                                              if position != '指名打者']
+        corrected += 1
+    database['dh_position_rule'] = (
+        'DH removed from players whose NPB career ended before the Pacific League '
+        'introduced the designated hitter in 1975.'
+    )
+    return corrected
 
 
 def review(database):
@@ -64,10 +90,12 @@ def review(database):
 def main():
     with DB_PATH.open(encoding='utf-8') as source:
         database = json.load(source)
+    dh_count = remove_impossible_dh(database)
     count, positions = review(database)
     with DB_PATH.open('w', encoding='utf-8') as target:
         json.dump(database, target, ensure_ascii=False, separators=(',', ':'))
-    print(f'OB pitcher review: {count} players, {positions} unverified positions hidden')
+    print(f'OB pitcher review: {count} players, {positions} unverified positions hidden; '
+          f'{dh_count} pre-1975 DH positions removed')
 
 
 if __name__ == '__main__':
